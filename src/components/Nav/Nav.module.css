@@ -1,0 +1,33 @@
+.nav {
+  a {
+    font-weight: 500;
+    position: relative;
+    svg {
+      vertical-align: middle;
+      font-size: var(--f-small);
+      margin-left: 4px;
+    }
+  }
+  a + a {
+    margin-left: 41px;
+  }
+}
+
+.activeLink::before {
+  content: url('/active-header.svg');
+  position: absolute;
+  top: -118px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.footer {
+  a {
+    font-size: var(--f-small);
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .activeLink::before {
+    content: '';
+  }
+}

@@ -1,0 +1,6 @@
+.xsmall {
+  font-size: var(--f-xsmall);
+}
+.big {
+  font-size: var(--f-big);
+}

@@ -1,0 +1,32 @@
+.button {
+  background-color: var(--c-primary);
+  color: var(--c-white);
+  border-radius: 10px;
+  padding: 11px 30px;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: var(--f-medium);
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
+  svg {
+    margin-left: 7px;
+  }
+}
+.dotted {
+  background-color: transparent;
+  color: var(--c-white);
+  border: 1px dashed var(--c-white);
+  font-size: var(--f-medium);
+  line-height: 22px;
+
+  &:hover {
+    border: 0;
+    background-color: var(--c-primary);
+    color: var(--c-white);
+  }
+}

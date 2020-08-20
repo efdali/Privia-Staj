@@ -1,0 +1,38 @@
+:root {
+  /* Colors */
+  --c-primary: #bc202d;
+  --c-secondary: #5382a1;
+  --c-black: #000000;
+  --c-white: #ffffff;
+  --c-social: #2e688d;
+  --c-light: #f8fbfd;
+  --c-card-bg: #2565d30d;
+  --c-gray: #979197;
+  --c-input-border: #e2e5ed;
+  --c-header-shadow: #00000040;
+  --c-checkbox-shadow: #131f151a;
+  --c-checkbox-label: #3e3f42;
+
+  /* Variables */
+  --header-height: 94px;
+
+  --f-small: 14px;
+  --f-normal: 16px;
+  --f-medium: 18px;
+  --f-big: 20px;
+  --f-title: 36px;
+  --f-big-title: 50px;
+
+  /*
+   * section bg #F8FBFD
+   * section ismi primary 16 roboto medium
+   * section title siyah 36 roboto medium
+   * section desc #979197 16 roboto regular
+   * açık poz card bg #2565D30D
+   * açık poz card hover bg #5382A1 - blog yazı hover
+   * blog yazıları tab font 18 roboto regular #979197 aktif siyah
+   * input 14 #00000080
+   * footer link 14
+   * footer sosyal medya #2E688D
+   */
+}
