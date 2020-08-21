@@ -18,6 +18,11 @@
 .lightBg {
   background-color: var(--c-light);
 }
+.column {
+  & > div {
+    flex-direction: column;
+  }
+}
 .left {
   margin-right: 86px;
 }
@@ -59,29 +64,4 @@
 .image {
   width: 558px;
   height: 487px;
-}
-
-.carret {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: inline-block;
-  width: 60px;
-  height: 50px;
-  border-bottom: solid 50px var(--c-light);
-  border-left: solid 30px transparent;
-  border-right: solid 30px transparent;
-
-  &::before {
-    content: '';
-    display: inline-block;
-    border: 1px solid var(--c-secondary);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    padding: 3px;
-    position: relative;
-    bottom: -14px;
-    left: -5px;
-  }
 }

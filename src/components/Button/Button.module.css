@@ -30,3 +30,11 @@
     color: var(--c-white);
   }
 }
+
+.reset {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 1em;
+  color: currentColor;
+}

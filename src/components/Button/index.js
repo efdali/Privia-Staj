@@ -3,10 +3,22 @@ import cn from 'classnames';
 
 import styles from './Button.module.css';
 
-function Button({ dotted = false, children, ...props }) {
+function Button({
+  dotted = false,
+  reset = false,
+  className,
+  children,
+  ...props
+}) {
   return (
     <button
-      className={cn(styles.button, { [styles.dotted]: dotted })}
+      className={cn(
+        reset ? styles.reset : styles.button,
+        {
+          [styles.dotted]: dotted,
+        },
+        className,
+      )}
       {...props}
     >
       {children}

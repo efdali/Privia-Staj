@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from '../Button';
-import Section from './index';
-import { Next } from '../icons';
+import Button from '../../Button';
+import Section from '../../Section';
+import { Next } from '../../icons';
 
 function Products() {
   return (

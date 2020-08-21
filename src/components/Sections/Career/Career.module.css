@@ -1,29 +1,10 @@
 .container {
-  & > div {
-    flex-direction: column;
-  }
 }
 
 .top {
   width: 100%;
   display: flex;
   justify-content: space-between;
-}
-.chevrons {
-  display: flex;
-  align-items: center;
-
-  button {
-    background: transparent;
-    border: 0;
-    outline: 0;
-    font-size: var(--f-title);
-    color: var(--c-primary);
-    opacity: 0.5;
-  }
-}
-.active {
-  opacity: 1 !important;
 }
 
 .body {
@@ -80,30 +61,9 @@
   font-size: var(--f-small);
   font-weight: 500;
   color: var(--c-primary);
-}
 
-/* TODO */
-.carret {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: inline-block;
-  width: 60px;
-  height: 50px;
-  border-bottom: solid 50px var(--c-light);
-  border-left: solid 30px transparent;
-  border-right: solid 30px transparent;
-
-  &::before {
-    content: '';
-    display: inline-block;
-    border: 1px solid var(--c-secondary);
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    padding: 3px;
-    position: relative;
-    bottom: -14px;
-    left: -5px;
+  svg {
+    margin-left: 8px;
+    vertical-align: text-top;
   }
 }

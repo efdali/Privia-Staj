@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from '../Button';
-import Section from './index';
+import Button from '../../Button';
+import Section from '../../Section';
 
-import { Next } from '../icons';
+import { Next } from '../../icons';
 
 function About() {
   return (

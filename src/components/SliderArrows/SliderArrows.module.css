@@ -1,0 +1,15 @@
+.chevrons {
+  display: flex;
+  align-items: center;
+
+  button {
+    font-size: 39px;
+    color: var(--c-primary);
+    transition: all 0.2s;
+    opacity: 0.5;
+
+    &:disabled {
+      color: var(--c-gray);
+    }
+  }
+}

@@ -3,6 +3,7 @@
   background-repeat: no-repeat;
   background-position: bottom;
   height: calc(100vh - var(--header-height));
+  background-size: 120% 85%;
 
   & > div {
     height: 100%;

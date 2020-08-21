@@ -1,8 +1,9 @@
 import React from 'react';
-import Button from '../Button';
-import { Link } from '../Link';
-import Section from './index';
-import styles from './Section.module.css';
+import Button from '../../Button';
+import { Link } from '../../Link';
+import Section from '../../Section';
+
+import styles from './Home.module.css';
 
 function Home() {
   return (

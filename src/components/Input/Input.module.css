@@ -1,5 +1,5 @@
 .input {
-  width: 255px;
+  width: 100%;
   height: 38px;
   border: 1px solid var(--c-input-border);
   border-radius: 4px;
@@ -7,4 +7,26 @@
   line-height: 22px;
   padding-left: 15px;
   padding-right: 15px;
+  display: block;
+  margin-bottom: 14px;
+  font-family: 'Roboto', sans-serif;
+
+  textarea& {
+    height: 77px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &::placeholder {
+    color: #00000080;
+  }
+}
+
+.inline {
+  width: calc(50% - 10px);
+  display: inline-block;
+
+  & + input.inline {
+    margin-left: 20px;
+  }
 }
