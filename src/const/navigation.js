@@ -1,7 +1,7 @@
 export default [
   {
     title: 'Anasayfa',
-    href: '/',
+    href: '#',
   },
   {
     title: 'Hakkımızda',

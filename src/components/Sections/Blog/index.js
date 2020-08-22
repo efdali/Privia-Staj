@@ -48,7 +48,7 @@ function Blog() {
   }, []);
 
   return (
-    <Section id="blog" className={styles.container} column full>
+    <Section id="blog" className={styles.container} column>
       <div className={styles.top}>
         <div className={styles.body}>
           <Section.Name>Blog Yazılarımız</Section.Name>
@@ -62,7 +62,7 @@ function Blog() {
           />
         </div>
         <ul className={styles.tab}>
-          <li className={activeTab === '' && styles.active}>
+          <li className={activeTab === '' ? styles.active : ''}>
             <Button onClick={() => setActiveTab('')} reset>
               Tümü
             </Button>
@@ -70,7 +70,9 @@ function Blog() {
           {categories.map((category) => (
             <li
               key={category.id}
-              className={activeTab === category.slug && styles.active}
+              className={
+                activeTab === category.slug ? styles.active : ''
+              }
             >
               <Button
                 onClick={() => setActiveTab(category.slug)}
@@ -82,14 +84,16 @@ function Blog() {
           ))}
         </ul>
       </div>
+
       <ItemsCarousel
-        requestToChangeActive={setActiveItemIndex}
-        activeItemIndex={activeItemIndex}
-        activePosition={'left'}
-        numberOfCards={4}
         gutter={20}
+        numberOfCards={articles.length > 4 ? 4 : articles.length}
+        slidesToScroll={articles.length > 4 ? 4 : 1}
+        activeItemIndex={activeItemIndex}
+        requestToChangeActive={setActiveItemIndex}
         classes={{
           wrapper: styles.slider,
+          itemsWrapper: styles.wrapper,
         }}
       >
         {articles.map((article) => (
