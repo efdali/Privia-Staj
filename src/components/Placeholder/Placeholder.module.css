@@ -1,0 +1,27 @@
+.placeholder {
+  height: 280px;
+  box-shadow: 0 0 5px var(--c-header-shadow);
+  background: var(--c-white);
+  width: 100%;
+}
+
+.header {
+  background-color: #eee;
+  height: 160px;
+  width: 100%;
+}
+
+.body {
+  height: 120px;
+  width: 100%;
+  padding: 10px;
+
+  span {
+    background-color: #eee;
+    display: block;
+    height: 22px;
+  }
+  span + span {
+    margin-top: 10px;
+  }
+}
