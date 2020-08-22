@@ -7,7 +7,7 @@ import { Link } from '../../Link';
 
 function Contact() {
   return (
-    <Section id="contact">
+    <Section className="section" id="contact">
       <Section.Body right>
         <Section.Name>İletişim</Section.Name>
         <Section.Title>Lorem Ipsum</Section.Title>

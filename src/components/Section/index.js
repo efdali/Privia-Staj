@@ -32,7 +32,9 @@ function Section({
 
 Section.Body = function Body({ right = false, children }) {
   return (
-    <article className={cn(right ? styles.right : styles.left)}>
+    <article
+      className={cn(styles.body, right ? styles.right : styles.left)}
+    >
       {children}
     </article>
   );

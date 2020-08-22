@@ -14,25 +14,26 @@
   --c-checkbox-label: #3e3f42;
 
   /* Variables */
-  --header-height: 94px;
+  --header-height: 85px;
 
-  --f-small: 14px;
-  --f-normal: 16px;
-  --f-medium: 18px;
-  --f-big: 20px;
-  --f-title: 36px;
-  --f-big-title: 50px;
+  --f-small: 11px;
+  --f-normal: 13px;
+  --f-medium: 15px;
+  --f-big: 17px;
+  --f-title: 28px;
+  --f-big-title: 40px;
+}
 
-  /*
-   * section bg #F8FBFD
-   * section ismi primary 16 roboto medium
-   * section title siyah 36 roboto medium
-   * section desc #979197 16 roboto regular
-   * açık poz card bg #2565D30D
-   * açık poz card hover bg #5382A1 - blog yazı hover
-   * blog yazıları tab font 18 roboto regular #979197 aktif siyah
-   * input 14 #00000080
-   * footer link 14
-   * footer sosyal medya #2E688D
-   */
+@media (--t) {
+  :root {
+    /* Variables */
+    --header-height: 94px;
+
+    --f-small: 14px;
+    --f-normal: 16px;
+    --f-medium: 18px;
+    --f-big: 20px;
+    --f-title: 36px;
+    --f-big-title: 50px;
+  }
 }

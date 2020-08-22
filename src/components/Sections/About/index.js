@@ -6,7 +6,7 @@ import { Next } from '../../icons';
 
 function About() {
   return (
-    <Section id="about" lightBg>
+    <Section className="section" id="about" lightBg>
       <Section.Body right>
         <Section.Name>Hakkımızda</Section.Name>
         <Section.Title>

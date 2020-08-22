@@ -22,7 +22,12 @@ function Career() {
   }, []);
 
   return (
-    <Section id="career" lightBg className={styles.container} column>
+    <Section
+      id="career"
+      lightBg
+      className={[styles.container, 'section']}
+      column
+    >
       <div className={styles.top}>
         <SliderArrows
           activeIndex={activeItemIndex}

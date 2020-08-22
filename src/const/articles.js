@@ -67,4 +67,31 @@ export default [
     poster: '/blog.png',
     href: '#blog',
   },
+  {
+    id: 6,
+    category: 'kategori',
+    date: '11 Mayıs 2019',
+    title:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    poster: '/blog.png',
+    href: '#blog',
+  },
+  {
+    id: 7,
+    category: 'kategori',
+    date: '11 Mayıs 2019',
+    title:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    poster: '/blog.png',
+    href: '#blog',
+  },
+  {
+    id: 8,
+    category: 'kategori',
+    date: '11 Mayıs 2019',
+    title:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    poster: '/blog.png',
+    href: '#blog',
+  },
 ];

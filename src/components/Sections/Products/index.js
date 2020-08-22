@@ -5,7 +5,7 @@ import { Next } from '../../icons';
 
 function Products() {
   return (
-    <Section id="products">
+    <Section className="section" id="products">
       <Section.Body>
         <Section.Name>Ürünlerimiz</Section.Name>
         <Section.Title>

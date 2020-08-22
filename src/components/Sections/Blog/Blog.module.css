@@ -3,6 +3,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+
+  @media (--t) {
+    flex-direction: row;
+  }
 }
 
 .title {
@@ -13,6 +18,11 @@
   display: flex;
   text-align: center;
   color: var(--c-gray);
+  width: 100%;
+
+  @media (--t) {
+    width: auto;
+  }
 
   li {
     padding-bottom: 12px;
@@ -91,11 +101,13 @@
   color: var(--c-gray);
 }
 .title {
-  margin-top: 9px;
-  font-size: var(--f-medium);
-  font-weight: 500;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  & > a {
+    margin-top: 9px;
+    font-size: var(--f-medium);
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }

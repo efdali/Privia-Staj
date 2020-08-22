@@ -5,12 +5,12 @@ import BacktoTop from '../BacktoTop';
 
 function Layout({ children }) {
   return (
-    <div>
+    <>
       <Header />
       <main>{children}</main>
       <BacktoTop />
       <Footer />
-    </div>
+    </>
   );
 }
 

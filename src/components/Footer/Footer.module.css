@@ -17,10 +17,14 @@
 .info {
   max-width: 650px;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (--t) {
+    margin-bottom: 70px;
+  }
 }
 .title {
   font-size: var(--f-title);
@@ -36,6 +40,11 @@
   padding-top: 34px;
   padding-bottom: 40px;
   align-items: center;
+  flex-direction: column;
+
+  @media (--t) {
+    flex-direction: row;
+  }
 }
 
 .copyright {

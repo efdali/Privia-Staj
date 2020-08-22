@@ -7,6 +7,11 @@
   & > div {
     display: flex;
     align-items: center;
+    flex-direction: column;
+
+    @media (--t) {
+      flex-direction: row;
+    }
   }
 }
 .full {
@@ -23,12 +28,32 @@
     flex-direction: column;
   }
 }
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  @media (--t) {
+    text-align: left;
+    display: block;
+  }
+}
 .left {
-  margin-right: 86px;
+  margin-bottom: 30px;
+
+  @media (--t) {
+    margin-right: 86px;
+    margin-bottom: 0;
+  }
 }
 .right {
-  margin-left: 86px;
+  margin-top: 30px;
   order: 2;
+
+  @media (--t) {
+    margin-top: 0;
+    margin-left: 86px;
+  }
 }
 
 .name {
@@ -62,6 +87,12 @@
 }
 
 .image {
-  width: 558px;
-  height: 487px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+
+  @media (--t) {
+    width: 558px;
+    height: 487px;
+  }
 }

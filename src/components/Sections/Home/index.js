@@ -7,7 +7,7 @@ import styles from './Home.module.css';
 
 function Home() {
   return (
-    <Section id="#" full>
+    <Section className="section" id="#" full>
       <Section.Body>
         <Section.Title big>
           The Science <b>Of Code</b>

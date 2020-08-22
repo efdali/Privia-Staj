@@ -1,9 +1,23 @@
 .nav {
   display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  justify-content: center;
+  @media (--t) {
+    overflow: hidden;
+    width: auto;
+  }
 
   & > li {
     position: relative;
-    line-height: var(--header-height);
+    white-space: nowrap;
+
+    @media (--t) {
+      white-space: initial;
+      line-height: var(--header-height);
+    }
 
     &:hover ul {
       height: auto;
@@ -51,13 +65,27 @@
 }
 
 .activeLink::before {
-  content: url('/active-header.svg');
+  content: '';
   position: absolute;
   top: -118px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (--t) {
+    content: url('/active-header.svg');
+  }
 }
 .footer {
+  flex-wrap: wrap;
+
+  & li:last-child {
+    margin-left: 0;
+
+    @media (--t) {
+      margin-left: 25px;
+    }
+  }
+
   li {
     line-height: initial;
     ul {

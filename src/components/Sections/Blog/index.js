@@ -6,26 +6,8 @@ import SliderArrows from '../../SliderArrows';
 
 import styles from './Blog.module.css';
 import { Next } from '../../icons';
-import Loading from '../../Placeholder';
+import { Link } from '../../Link';
 import Placeholder from '../../Placeholder';
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3,
-    slidesToSlide: 3, // optional, default to 1.
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2,
-    slidesToSlide: 2, // optional, default to 1.
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1,
-    slidesToSlide: 1, // optional, default to 1.
-  },
-};
 
 function Blog() {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -52,7 +34,11 @@ function Blog() {
   }, []);
 
   return (
-    <Section id="blog" className={styles.container} column>
+    <Section
+      id="blog"
+      className={[styles.container, 'section']}
+      column
+    >
       <div className={styles.top}>
         <div className={styles.body}>
           <Section.Name>Blog Yazılarımız</Section.Name>
@@ -95,7 +81,7 @@ function Blog() {
         numberOfPlaceholderItems={4}
         gutter={20}
         numberOfCards={articles.length > 4 ? 4 : articles.length}
-        slidesToScroll={articles.length > 4 ? 4 : 1}
+        slidesToScroll={articles.length > 4 ? 4 : articles.length}
         activeItemIndex={activeItemIndex}
         requestToChangeActive={setActiveItemIndex}
         classes={{
@@ -112,13 +98,19 @@ function Blog() {
                   <Button className={styles.categoryBtn}>
                     {article.category.toUpperCase()}
                   </Button>
-                  <div className={styles.back}>
-                    <Next />
-                  </div>
+                  <Link href="/">
+                    <a className={styles.back}>
+                      <Next />
+                    </a>
+                  </Link>
                 </div>
                 <div className={styles.cardBody}>
                   <time className={styles.date}>{article.date}</time>
-                  <h3 className={styles.title}>{article.title}</h3>
+                  <h3 className={styles.title}>
+                    <Link href="/">
+                      <a>{article.title}</a>
+                    </Link>
+                  </h3>
                 </div>
               </article>
             ))}

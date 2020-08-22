@@ -12,7 +12,12 @@
     height: var(--header-height);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-direction: column;
+    @media (--t) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
   }
 }
 .brand {

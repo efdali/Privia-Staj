@@ -23,9 +23,10 @@
   border: 1px dashed var(--c-white);
   font-size: var(--f-medium);
   line-height: 22px;
+  transition: all 0.2s;
 
   &:hover {
-    border: 0;
+    border-color: transparent;
     background-color: var(--c-primary);
     color: var(--c-white);
   }
