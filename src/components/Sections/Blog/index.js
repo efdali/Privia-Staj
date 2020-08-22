@@ -6,6 +6,8 @@ import SliderArrows from '../../SliderArrows';
 
 import styles from './Blog.module.css';
 import { Next } from '../../icons';
+import Loading from '../../Placeholder';
+import Placeholder from '../../Placeholder';
 
 const responsive = {
   desktop: {
@@ -28,13 +30,15 @@ const responsive = {
 function Blog() {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const [activeTab, setActiveTab] = useState('');
+  const [loading, setLoading] = useState(true);
   const [articles, setArticles] = useState([]);
   const [categories, setCategories] = useState([]);
 
   const fetchBlogs = () => {
     return fetch(`/api/articles/${activeTab}`)
       .then((res) => res.json())
-      .then((res) => setArticles(res.articles));
+      .then((res) => setArticles(res.articles))
+      .finally(() => setLoading(false));
   };
 
   useEffect(() => {
@@ -86,6 +90,9 @@ function Blog() {
       </div>
 
       <ItemsCarousel
+        placeholderItem={<Placeholder />}
+        enablePlaceholder={true}
+        numberOfPlaceholderItems={4}
         gutter={20}
         numberOfCards={articles.length > 4 ? 4 : articles.length}
         slidesToScroll={articles.length > 4 ? 4 : 1}
@@ -96,23 +103,25 @@ function Blog() {
           itemsWrapper: styles.wrapper,
         }}
       >
-        {articles.map((article) => (
-          <article className={styles.card} key={article.id}>
-            <div className={styles.header}>
-              <img src={article.poster} />
-              <Button className={styles.categoryBtn}>
-                {article.category.toUpperCase()}
-              </Button>
-              <div className={styles.back}>
-                <Next />
-              </div>
-            </div>
-            <div className={styles.cardBody}>
-              <time className={styles.date}>{article.date}</time>
-              <h3 className={styles.title}>{article.title}</h3>
-            </div>
-          </article>
-        ))}
+        {loading
+          ? []
+          : articles.map((article) => (
+              <article className={styles.card} key={article.id}>
+                <div className={styles.header}>
+                  <img src={article.poster} />
+                  <Button className={styles.categoryBtn}>
+                    {article.category.toUpperCase()}
+                  </Button>
+                  <div className={styles.back}>
+                    <Next />
+                  </div>
+                </div>
+                <div className={styles.cardBody}>
+                  <time className={styles.date}>{article.date}</time>
+                  <h3 className={styles.title}>{article.title}</h3>
+                </div>
+              </article>
+            ))}
       </ItemsCarousel>
       <Button>Tüm Blog Yazıları</Button>
     </Section>

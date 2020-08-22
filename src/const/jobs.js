@@ -31,4 +31,12 @@ export default [
       'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     href: '/',
   },
+  {
+    id: 5,
+    icon: '/design.svg',
+    title: 'Jr. UI Designer',
+    desc:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    href: '/',
+  },
 ];

@@ -5,7 +5,7 @@ import Link from './Link.js';
 
 function ActiveLink({ href, activeClassName = '', children }) {
   const { asPath, pathname } = useRouter();
-  console.log(asPath);
+
   const className = useMemo(() => {
     let path = '';
 

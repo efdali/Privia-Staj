@@ -5,8 +5,9 @@ import { Link } from '../../Link';
 import Section from '../../Section';
 
 import styles from './Career.module.css';
-import { Next, Back } from '../../icons';
+import { Next } from '../../icons';
 import SliderArrows from '../../SliderArrows';
+import Placeholder from '../../Placeholder';
 
 function Career() {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
@@ -38,6 +39,9 @@ function Career() {
         </div>
       </div>
       <ItemsCarousel
+        placeholderItem={<Placeholder />}
+        enablePlaceholder={true}
+        numberOfPlaceholderItems={4}
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
         activePosition={'left'}
@@ -47,20 +51,22 @@ function Career() {
           wrapper: styles.slider,
         }}
       >
-        {jobs.map((job) => (
-          <div className={styles.card} key={job.id}>
-            <div className={styles.logo}>
-              <img src={job.icon} />
-            </div>
-            <h3 className={styles.title}>{job.title}</h3>
-            <p className={styles.secondary}>{job.desc}</p>
-            <Link href={job.href}>
-              <a className={styles.apply}>
-                Başvur <Next />
-              </a>
-            </Link>
-          </div>
-        ))}
+        {loading
+          ? []
+          : jobs.map((job) => (
+              <div className={styles.card} key={job.id}>
+                <div className={styles.logo}>
+                  <img src={job.icon} />
+                </div>
+                <h3 className={styles.title}>{job.title}</h3>
+                <p className={styles.secondary}>{job.desc}</p>
+                <Link href={job.href}>
+                  <a className={styles.apply}>
+                    Başvur <Next />
+                  </a>
+                </Link>
+              </div>
+            ))}
       </ItemsCarousel>
       <Button>Tüm Açık Pozisyonlar</Button>
     </Section>
