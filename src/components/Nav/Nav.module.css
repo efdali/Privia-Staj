@@ -4,14 +4,13 @@
   overflow-x: scroll;
   overflow-y: hidden;
   scrollbar-width: none;
-  justify-content: center;
+
   @media (--t) {
     overflow: hidden;
     width: auto;
   }
 
   & > li {
-    position: relative;
     white-space: nowrap;
 
     @media (--t) {
@@ -78,19 +77,8 @@
 .footer {
   flex-wrap: wrap;
 
-  & li:last-child {
-    margin-left: 0;
-
-    @media (--t) {
-      margin-left: 25px;
-    }
-  }
-
   li {
     line-height: initial;
-    ul {
-      bottom: 100%;
-    }
   }
 
   li + li {
